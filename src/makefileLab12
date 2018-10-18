@@ -1,0 +1,11 @@
+lab12: lab12Main.o lab12List.o
+	g++ -o lab12 lab12Main.o lab12List.o
+
+lab12Main.o: lab12Main.cpp lab12List.h
+	g++ -c lab12Main.cpp
+
+lab12List.o: lab12List.cpp lab12List.h
+	g++ -c lab12List.cpp
+
+clean:
+	rm lab12*.o lab12
